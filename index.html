@@ -1,1 +1,730 @@
-﻿<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/><meta name="theme-color" content="#0d1f1a"/><title>免费测算数字密码 | 数易文化国际</title><style>*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}:root{--green:#0d1f1a;--green2:#1a2e2a;--gold:#c9a84c;--gold2:#e8d5a3;--muted:#a8b8b4;--red:#c0392b;--card-bg:rgba(255,255,255,.04)}html{scroll-behavior:smooth;font-size:16px}body{background:var(--green);color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Georgia,serif;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}button,input,select,textarea{font-family:inherit}.btn{display:block;width:100%;padding:16px 20px;background:linear-gradient(135deg,#c9a84c,#e8d5a3,#c9a84c);color:#0d1f1a;font-weight:700;border-radius:6px;letter-spacing:.5px;transition:transform .15s,box-shadow .15s,opacity .15s;font-size:1rem;cursor:pointer;border:none;text-align:center;-webkit-appearance:none}.btn:active{transform:scale(.97);opacity:.9}.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold);width:auto;display:inline-block;padding:12px 28px}.gold{color:var(--gold)}.center{text-align:center}.section{padding:52px 16px}.container{max-width:480px;margin:0 auto;width:100%}.divider{width:40px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:14px auto}.sec-label{font-size:.68rem;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:6px}.sec-h2{font-size:1.5rem;font-weight:700;margin-bottom:6px;line-height:1.3}.sec-en{font-size:.82rem;color:var(--gold2);font-style:italic;margin-bottom:12px}
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#0d1f1a">
+    <meta name="description" content="数易文化国际 - 免费测算您的数字密码，解惑人生困境">
+    <title>免费测算数字密码 | 数易文化国际 ShuYi Culture</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: rgba(201, 168, 76, 0.2);
+        }
+
+        :root {
+            --green: #0d1f1a;
+            --green2: #1a2e2a;
+            --gold: #c9a84c;
+            --gold2: #e8d5a3;
+            --muted: #a8b8b4;
+            --red: #c0392b;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background: var(--green);
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 容器 */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* 头部 */
+        .header {
+            padding: 20px 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+
+        .logo-en {
+            font-size: 0.85rem;
+            color: var(--gold2);
+            font-style: italic;
+        }
+
+        /* 英雄区 - 痛点 + 表单 */
+        .hero {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--gold2);
+            margin-bottom: 30px;
+        }
+
+        /* 痛点卡片 */
+        .pain-points {
+            margin: 30px 0;
+        }
+
+        .pain-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid var(--gold);
+            padding: 15px 18px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            text-align: left;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .pain-card:active {
+            transform: scale(0.98);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .pain-icon {
+            font-size: 1.3rem;
+            margin-right: 10px;
+        }
+
+        .pain-text {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .pain-text-en {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-top: 5px;
+        }
+
+        /* 表单区域 */
+        .calc-form {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px 20px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+        }
+
+        .form-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            color: var(--gold2);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            transition: border-color 0.2s, background 0.2s;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* 按钮 */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #c9a84c, #e8d5a3, #c9a84c);
+            color: #0d1f1a;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            -webkit-appearance: none;
+            min-height: 50px;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* 结果区域 */
+        .result {
+            display: none;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px 20px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 2px solid var(--gold);
+        }
+
+        .result.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .result-content {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .result-cta {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .result-cta-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--gold2);
+        }
+
+        /* 加载状态 */
+        .loading {
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid var(--gold);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 福利区域 */
+        .benefits {
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: var(--gold2);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .benefit-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .benefit-desc {
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .benefit-value {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--green);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        /* 底部 CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--green);
+            padding: 15px 20px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: none;
+        }
+
+        .sticky-cta.show {
+            display: block;
+        }
+
+        /* 页脚 */
+        .footer {
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer a {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        /* 响应式优化 */
+        @media (max-width: 375px) {
+            html {
+                font-size: 15px;
+            }
+            
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .calc-form {
+                padding: 20px 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            html {
+                font-size: 18px;
+            }
+            
+            .container {
+                padding: 0 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">数易文化国际</div>
+            <div class="logo-en">ShuYi Culture International</div>
+        </div>
+    </header>
+
+    <!-- 英雄区 - 痛点 + 表单 -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">
+                人生困境，数字解密<br>
+                <span style="color: var(--gold);">免费测算您的命运密码</span>
+            </h1>
+            <p class="hero-subtitle">
+                Life Puzzles, Numbers Reveal<br>
+                Free Numerology Reading
+            </p>
+
+            <!-- 痛点卡片 -->
+            <div class="pain-points">
+                <div class="pain-card">
+                    <div class="pain-icon">💼</div>
+                    <div class="pain-text">
+                        <strong>事业瓶颈：</strong>明明很努力，升职加薪却总轮不到你？
+                    </div>
+                    <div class="pain-text-en">Career stuck despite all your efforts?</div>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-icon">💸</div>
+                    <div class="pain-text">
+                        <strong>财运不稳：</strong>钱来得快去得也快，存不住钱？
+                    </div>
+                    <div class="pain-text-en">Money comes and goes, can't save?</div>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-icon">👨‍👩‍👧</div>
+                    <div class="pain-text">
+                        <strong>家庭矛盾：</strong>和家人总是沟通不畅，关系紧张？
+                    </div>
+                    <div class="pain-text-en">Family communication issues?</div>
+                </div>
+
+                <div class="pain-card">
+                    <div class="pain-icon">🌧️</div>
+                    <div class="pain-text">
+                        <strong>运势低迷：</strong>感觉被命运针对，诸事不顺？
+                    </div>
+                    <div class="pain-text-en">Feeling targeted by bad luck?</div>
+                </div>
+            </div>
+
+            <!-- 测算表单 -->
+            <div class="calc-form">
+                <h2 class="form-title">
+                    🔮 立即免费测算<br>
+                    <span style="font-size: 0.8rem; font-weight: 400;">Free Numerology Reading</span>
+                </h2>
+                
+                <form id="calcForm">
+                    <div class="form-group">
+                        <label class="form-label">姓名 Name *</label>
+                        <input type="text" class="form-input" id="name" name="name" placeholder="请输入您的姓名 / Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">出生日期 Birth Date *</label>
+                        <input type="date" class="form-input" id="birthdate" name="birthdate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">联系方式 Contact (WhatsApp/WeChat) *</label>
+                        <input type="tel" class="form-input" id="contact" name="contact" placeholder="+60xxxxxxxxx" required>
+                    </div>
+
+                    <button type="submit" class="btn" id="submitBtn">
+                        立即测算 Calculate Now
+                    </button>
+                </form>
+            </div>
+
+            <!-- 加载状态 -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <div>正在测算中...<br>Calculating...</div>
+            </div>
+
+            <!-- 结果显示 -->
+            <div class="result" id="result">
+                <h3 class="result-title">✨ 您的数字密码解析</h3>
+                <div class="result-content" id="resultContent"></div>
+                <div class="result-cta">
+                    <p class="result-cta-text">
+                        想要获得<strong style="color: var(--gold);">完整深度报告</strong>？<br>
+                        立即加入我们的专属群组！
+                    </p>
+                    <button class="btn" onclick="scrollToBottom()">
+                        加入群组获取完整报告<br>
+                        <span style="font-size: 0.85rem;">Join Group for Full Report</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 福利区域 -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">加群即享专属福利</h2>
+            <p class="section-subtitle">Exclusive Benefits for Group Members</p>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">📊</div>
+                <div class="benefit-title">免费个人数字密码深度解读</div>
+                <div class="benefit-desc">
+                    Free Personal Numerology Deep Reading
+                </div>
+                <span class="benefit-value">价值 RM388</span>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">💬</div>
+                <div class="benefit-title">一对一专业咨询</div>
+                <div class="benefit-desc">
+                    One-on-One Professional Consultation
+                </div>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <div class="benefit-title">优先预约线下沙龙活动</div>
+                <div class="benefit-desc">
+                    Priority Booking for Offline Salon Events
+                </div>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">⚡</div>
+                <div class="benefit-title">定制能量调整方案</div>
+                <div class="benefit-desc">
+                    Customized Energy Adjustment Plan
+                </div>
+            </div>
+
+            <button class="btn" style="margin-top: 30px;" onclick="scrollToTop()">
+                立即加入群组<br>
+                <span style="font-size: 0.85rem;">Join Our Group Now</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- 底部固定 CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <button class="btn" onclick="scrollToTop()">
+            免费测算数字密码 Free Reading
+        </button>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 数易文化国际 ShuYi Culture International</p>
+            <p style="margin-top: 10px;">
+                <a href="https://www.shuyi.com.my/" target="_blank">www.shuyi.com.my</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // API 配置
+        const API_CONFIG = {
+            url: 'http://43.139.203.146:8050/v1/chat/completions',
+            apiKey: 'sk-xjlzds0424',
+            model: 'deepseek-chat'
+        };
+
+        // 表单提交处理
+        document.getElementById('calcForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const birthdate = document.getElementById('birthdate').value;
+            const contact = document.getElementById('contact').value.trim();
+            
+            if (!name || !birthdate || !contact) {
+                alert('请填写完整信息 / Please fill in all fields');
+                return;
+            }
+
+            // 显示加载状态
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('result').classList.remove('show');
+            document.getElementById('submitBtn').disabled = true;
+
+            try {
+                // 计算生命数字
+                const lifeNumber = calculateLifeNumber(birthdate);
+                
+                // 调用 AI API
+                const reading = await getAIReading(name, birthdate, lifeNumber);
+                
+                // 显示结果
+                displayResult(name, lifeNumber, reading);
+                
+                // 保存联系信息（实际应用中应该发送到后端）
+                console.log('Contact saved:', { name, birthdate, contact });
+                
+            } catch (error) {
+                console.error('Error:', error);
+                // 使用备用解读
+                const lifeNumber = calculateLifeNumber(birthdate);
+                const fallbackReading = getFallbackReading(lifeNumber);
+                displayResult(name, lifeNumber, fallbackReading);
+            } finally {
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('submitBtn').disabled = false;
+            }
+        });
+
+        // 计算生命数字
+        function calculateLifeNumber(birthdate) {
+            const digits = birthdate.replace(/-/g, '').split('').map(Number);
+            let sum = digits.reduce((a, b) => a + b, 0);
+            
+            while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+                sum = sum.toString().split('').map(Number).reduce((a, b) => a + b, 0);
+            }
+            
+            return sum;
+        }
+
+        // 调用 AI API 获取解读
+        async function getAIReading(name, birthdate, lifeNumber) {
+            const prompt = `你是一位专业的数字命理学家。请为以下信息提供简短的数字密码解读（100-150字）：
+
+姓名：${name}
+出生日期：${birthdate}
+生命数字：${lifeNumber}
+
+请结合易经智慧，分析此人的性格特点、面临的挑战，以及调整建议。语气要温暖、专业、有洞察力。`;
+
+            const response = await fetch(API_CONFIG.url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${API_CONFIG.apiKey}`
+                },
+                body: JSON.stringify({
+                    model: API_CONFIG.model,
+                    messages: [
+                        {
+                            role: 'user',
+                            content: prompt
+                        }
+                    ],
+                    temperature: 0.8,
+                    max_tokens: 300
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('API request failed');
+            }
+
+            const data = await response.json();
+            return data.choices[0].message.content;
+        }
+
+        // 备用解读（API 失败时使用）
+        function getFallbackReading(lifeNumber) {
+            const readings = {
+                1: '您的生命数字是1，代表领导力与独立性。您天生具有开创精神，但有时过于独立可能导致孤立。建议：学会团队合作，平衡个人野心与他人需求。',
+                2: '您的生命数字是2，代表和谐与合作。您善于倾听和协调，但有时过于敏感。建议：建立自信，学会在帮助他人的同时保护自己的能量。',
+                3: '您的生命数字是3，代表创造力与表达。您充满活力和创意，但有时容易分散注意力。建议：专注于核心目标，将创意转化为实际成果。',
+                4: '您的生命数字是4，代表稳定与务实。您踏实可靠，但有时过于固执。建议：保持灵活性，在稳定中寻求适度的变化和创新。',
+                5: '您的生命数字是5，代表自由与变化。您热爱冒险和新体验，但有时缺乏持久力。建议：在追求自由的同时，培养责任感和承诺。',
+                6: '您的生命数字是6，代表责任与关怀。您富有同情心，但有时过度付出。建议：学会设定界限，在照顾他人的同时也要照顾自己。',
+                7: '您的生命数字是7，代表智慧与内省。您善于思考和分析，但有时过于孤僻。建议：平衡独处与社交，将内在智慧与外界分享。',
+                8: '您的生命数字是8，代表力量与成就。您有强大的执行力，但有时过于物质化。建议：在追求成功的同时，不要忽视精神层面的成长。',
+                9: '您的生命数字是9，代表完成与奉献。您富有同理心和理想主义，但有时难以放下过去。建议：学会放手，在结束中看到新的开始。',
+                11: '您的生命数字是11（大师数字），代表直觉与启发。您具有强大的精神力量，但有时压力过大。建议：相信自己的直觉，同时保持脚踏实地。',
+                22: '您的生命数字是22（大师数字），代表建设与实现。您有能力将梦想变为现实，但有时目标过于宏大。建议：分步实施计划，将远大理想转化为具体行动。',
+                33: '您的生命数字是33（大师数字），代表大爱与教导。您有强大的疗愈能力，但有时承担过多。建议：学会说不，在帮助他人的同时保护自己的能量。'
+            };
+            
+            return readings[lifeNumber] || readings[1];
+        }
+
+        // 显示结果
+        function displayResult(name, lifeNumber, reading) {
+            const resultContent = document.getElementById('resultContent');
+            resultContent.innerHTML = `
+                <p><strong>${name}</strong>，您好！</p>
+                <p style="margin: 15px 0; padding: 15px; background: rgba(201, 168, 76, 0.1); border-radius: 6px;">
+                    <strong style="color: var(--gold); font-size: 1.2rem;">您的生命数字：${lifeNumber}</strong>
+                </p>
+                <p style="line-height: 1.8;">${reading}</p>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: var(--muted);">
+                    ⚠️ 这只是初步解读。想要获得完整的深度分析和个性化调整方案，请加入我们的专属群组！
+                </p>
+            `;
+            
+            document.getElementById('result').classList.add('show');
+            
+            // 滚动到结果
+            setTimeout(() => {
+                document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+
+        // 滚动到顶部
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 滚动到底部
+        function scrollToBottom() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        // 显示/隐藏固定 CTA
+        let lastScroll = 0;
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            const stickyCta = document.getElementById('stickyCta');
+            
+            if (currentScroll > 500 && currentScroll > lastScroll) {
+                stickyCta.classList.add('show');
+            } else if (currentScroll < lastScroll - 50) {
+                stickyCta.classList.remove('show');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // 设置日期选择器的最大值为今天
+        document.getElementById('birthdate').max = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html>
