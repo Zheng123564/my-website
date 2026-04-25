@@ -537,11 +537,11 @@
                 <div class="result-cta">
                     <p class="result-cta-text">
                         想要获得<strong style="color: var(--gold);">完整深度报告</strong>？<br>
-                        立即加入我们的专属群组！
+                        立即联系我们的专业顾问！
                     </p>
-                    <button class="btn" onclick="scrollToBottom()">
-                        加入群组获取完整报告<br>
-                        <span style="font-size: 0.85rem;">Join Group for Full Report</span>
+                    <button class="btn" onclick="openWhatsApp()">
+                        💬 WhatsApp 咨询获取完整报告<br>
+                        <span style="font-size: 0.85rem;">Contact via WhatsApp for Full Report</span>
                     </button>
                 </div>
             </div>
@@ -587,17 +587,17 @@
                 </div>
             </div>
 
-            <button class="btn" style="margin-top: 30px;" onclick="scrollToTop()">
-                立即加入群组<br>
-                <span style="font-size: 0.85rem;">Join Our Group Now</span>
+            <button class="btn" style="margin-top: 30px;" onclick="openWhatsApp()">
+                💬 WhatsApp 立即咨询<br>
+                <span style="font-size: 0.85rem;">Contact Us via WhatsApp Now</span>
             </button>
         </div>
     </section>
 
     <!-- 底部固定 CTA -->
     <div class="sticky-cta" id="stickyCta">
-        <button class="btn" onclick="scrollToTop()">
-            免费测算数字密码 Free Reading
+        <button class="btn" onclick="openWhatsApp()">
+            💬 WhatsApp 免费咨询
         </button>
     </div>
 
@@ -733,6 +733,10 @@
 
         // 显示结果
         function displayResult(name, lifeNumber, reading) {
+            // 保存用户信息供 WhatsApp 使用
+            userInfo.name = name;
+            userInfo.lifeNumber = lifeNumber;
+            
             const resultContent = document.getElementById('resultContent');
             resultContent.innerHTML = `
                 <p><strong>${name}</strong>，您好！</p>
@@ -741,7 +745,7 @@
                 </p>
                 <p style="line-height: 1.8;">${reading}</p>
                 <p style="margin-top: 15px; font-size: 0.9rem; color: var(--muted);">
-                    ⚠️ 这只是初步解读。想要获得完整的深度分析和个性化调整方案，请加入我们的专属群组！
+                    ⚠️ 这只是初步解读。想要获得完整的深度分析和个性化调整方案，请通过 WhatsApp 联系我们的专业顾问！
                 </p>
             `;
             
@@ -751,6 +755,25 @@
             setTimeout(() => {
                 document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'center' });
             }, 100);
+        }
+
+        // WhatsApp 联系功能
+        const WHATSAPP_NUMBER = '601116721913'; // 去掉 + 号
+        let userInfo = { name: '', lifeNumber: '' }; // 存储用户信息
+
+        function openWhatsApp() {
+            let message = '你好！我想咨询数字密码解读服务。';
+            
+            // 如果用户已经测算过，带上他们的信息
+            if (userInfo.name && userInfo.lifeNumber) {
+                message = `你好！我是 ${userInfo.name}，刚才测算了我的生命数字是 ${userInfo.lifeNumber}，想要获取完整的深度报告和专业咨询。`;
+            }
+            
+            // 构建 WhatsApp 链接
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            
+            // 打开 WhatsApp
+            window.open(whatsappUrl, '_blank');
         }
 
         // 滚动到顶部
